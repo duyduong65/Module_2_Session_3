@@ -37,7 +37,7 @@ class StopWatch
 
     public function getElapsedTime()
     {
-        return $this->getEndTime() - $this->getStartTime();
+        return $this->endTime - $this->startTime;
     }
 }
 
