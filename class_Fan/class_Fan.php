@@ -18,11 +18,56 @@ class Fan
         $this->color = $color;
     }
 
-    function getSpeed(){
+    public function getSpeed()
+    {
         return $this->speed;
     }
-    function setSpeed (){
 
+    public function setSpeed($value)
+    {
+        $this->speed = $value;
+    }
+
+    public function getOn()
+    {
+        return $this->on;
+    }
+
+    public function setOn($value)
+    {
+        $this->on = $value;
+    }
+
+    public function getRadius()
+    {
+        return $this->radius;
+    }
+
+    public function setRadius($value)
+    {
+        $this->radius = $value;
+    }
+
+    public function getColor()
+    {
+        return $this->color;
+    }
+
+    public function setColor($value)
+    {
+        $this->color = $value;
+    }
+
+    public function toString()
+    {
+        if ($this->getOn()) {
+            return "Fan speed: ".$this->getSpeed() . ", Fan color: ".$this->getColor() .", Fan radius: ". $this->getRadius() . " and fan is on";
+        } else {
+            return "Fan speed: ".$this->getSpeed() . ", Fan color: ".$this->getColor() .", Fan radius: ". $this->getRadius() . " and fan is off";
+        }
     }
 
 }
+
+$fanToshiba = new Fan();
+echo ($fanToshiba->toString());
